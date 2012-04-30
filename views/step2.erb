@@ -7,8 +7,8 @@
 <form action="step3" method="get" accept-charset="utf-8">
   <h2>Step 2: Select Your Languages & Date</h2>
   <h4>Please select 1 or more languages</h4>
-  <% @languages.each do |language| %>
-    <input type="checkbox" name="language" value="<%= language %>"><%= language %>
+  <% @languages.each_with_index do |language, i| %>
+    <input type="checkbox" name="language<%= i %>" value="<%= language %>"> <%= language %>
     <br>
   <% end %>
   <div style="margin-top: 25px;">
