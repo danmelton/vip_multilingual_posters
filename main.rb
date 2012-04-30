@@ -15,3 +15,7 @@ get '/step3' do
   "Step 3: Download Posters"
   erb :step3
 end
+
+def geocode(address)
+  Geocoder
+end

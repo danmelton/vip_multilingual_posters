@@ -4,5 +4,13 @@
     <h2 class="step1">Step 2: Select Your Languages & Date</h2>
 </div>
 
+<form action="step2_submit" method="get" accept-charset="utf-8">
+<%["chinese", "english"].each do |language|%>
+  <input type="checkbox" name="language" value="<%=language%>"><%=language%><br> 
+<% end %>
+  <p><input type="submit" value="Step 3: Download Posters"></p>
+</form>
+
+
 
 <%= erb :footer %>
