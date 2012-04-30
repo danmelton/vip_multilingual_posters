@@ -1,0 +1,225 @@
+﻿.apiphany .search
+{
+    float: right;
+}
+
+.apiphany ol.services
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+    clear: both;
+}
+
+.apiphany ol.services a
+{
+    color: inherit;
+}
+
+.apiphany ol.services li
+{
+    width: 47%;
+    margin: 0 20px 10px 0;
+    overflow: hidden;
+    float: left;
+}
+
+.apiphany ol.services li img
+{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 7px;
+    border: none;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+.apiphany ol.services li h2
+{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 22px;
+    margin: 0;
+}
+
+.apiphany .operations
+{
+}
+
+.apiphany .operation p
+{
+   word-wrap: break-word;
+}
+
+.apiphany .operations ul li
+{
+    font-size: 15px;
+    padding-left: 20px;
+    background-image: url("method_icon.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-position: left center;
+    margin: 10px 0 0 0;
+    word-wrap: break-word;
+}
+
+.apiphany .operations ul li.selected
+{
+    font-weight: bold;
+}
+
+.apiphany .operation ol.parameters
+{
+}
+
+.apiphany .operation ol.parameters li
+{
+    margin-top: 5px;
+    padding: 4px 4px 0px 17px;
+    background: url("method_icon.png");
+    background-repeat: no-repeat;
+    background-position: left 8px;
+}
+
+.apiphany .operation ol.parameters li .name
+{
+    float: left;
+    font-size: 15px;
+}
+
+.apiphany .operation ol.parameters li .type
+{
+    float: right;
+    text-transform: uppercase;
+}
+
+.apiphany .operation ol.parameters li .description
+{
+    clear: both;
+}
+
+.apiphany .operation ol.parameters li .example
+{
+}
+
+.apiphany .operation .samples
+{
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.apiphany .operation .samples a
+{
+    padding: 8px;
+}
+
+.console
+{
+    min-height: 300px;
+}
+
+.console ol.parameters li
+{
+    margin-top: 5px;
+    padding: 0px 4px 0px 17px;
+    background: url("method_icon.png");
+    background-repeat: no-repeat;
+    background-position: left 7px;
+}
+
+.console ol.parameters li label
+{
+    display: block;
+    float: left;
+    font-family: Tahoma;
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 25px;
+    width: 200px;
+}
+
+.console ol.parameters li input[type=text]
+{
+    width: 300px;
+}
+
+.clearBoth
+{
+    clear: both;
+}
+
+.operation #documentation h3
+{
+    margin-top: 15px;
+}
+.operation #documentation h4
+{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.apiphany .operation li .operation-descr
+{
+    margin-top: 7px;
+    margin-left: 7px;
+    font-size: 0.8em;
+}
+
+.apiphany .operation .object
+{
+    /*width: 100%;*/
+    margin: 15px 0 15px 0;
+}
+
+.apiphany .operation .object .name
+{
+    font-family: consolas;
+    white-space: nowrap;
+    width: 200px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.apiphany .operation .object .type
+{
+    padding: 2px 2px 2px 20px;
+    margin: 0;
+    text-transform: capitalize;
+    font-family: consolas;
+    box-sizing: border-box;
+    width: 85px;
+    vertical-align: top;
+}
+
+.apiphany .operation .object .description
+{
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.apiphany .operation.console textarea
+{
+    resize: vertical;
+    min-height: 100px;
+    font-family: consolas;
+    font-size: inherit;
+}
+
+.apiphany .operation.console .object .name label
+{
+    font-family: consolas;
+    font-size: inherit;
+}
+
+.apiphany .operation.console .object input
+{
+    width: 300px;
+}
+
+.apiphany .operation.console .object .description
+{
+    width: auto;
+}

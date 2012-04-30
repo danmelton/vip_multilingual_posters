@@ -1,0 +1,59 @@
+﻿#code-browser ul { list-style: none; }
+#code-browser ul, #code-browser li { margin: 0; padding: 0; }
+
+/*#code-browser .folders, */#code-browser .content-view {
+	height: 350px;
+}
+
+#code-browser .folders, #code-browser .items {
+	padding: 3px;
+}
+
+#code-browser li:not(.current) {
+	cursor: pointer;
+}
+
+#code-browser li {
+	border: solid 1px transparent;
+}
+
+#code-browser li.current-folder {
+	border-color: #bbb;
+	background-color: #eee;
+}
+
+#code-browser li:hover {
+	border-color: #bbe;
+	background-color: #eef;
+}
+
+#code-browser .colwrap { background-color: #fff;padding-right: 2px; }
+#code-browser .cols { border: solid 1px #000; }
+#code-browser .colsep { 
+	background-color: #fff;
+	border: solid 1px #000;
+	border-width: 0 1px;
+}
+
+#code-browser .cols, #code-browser .colsep { border-color: #bbb; }
+
+#code-browser li { padding: 3px; }
+
+#code-browser .icon 
+{
+	display: inline-block;
+	background-image: url(../content/images/icons.png);
+	width: 16px;
+	height: 16px;
+	margin-right: 0.3em;
+	vertical-align: text-top;
+}
+
+#code-browser .file .icon {
+	background-position: -16px 0;
+}
+
+#code-browser .content-view { position: relative;overflow-y: auto; }
+#code-browser .listing { position: absolute;width: 100%; height: 100%; }
+
+#code-browser .syntaxhighlighter { margin: 0!important;height: 100%; }
