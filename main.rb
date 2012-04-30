@@ -43,7 +43,7 @@ get '/download' do
   size = params[:size]  
   translations = YAML.load(open('files/translations.yml'))
   
-  pdf = Prawn::Document.generate "poster_#{language}_#{size}.pdf", :template => "public/pdfs/#{size}.pdf"  do |pdf|
+  pdf = Prawn::Document.new :template => "public/pdfs/#{size}.pdf"  do |pdf|
     pdf.fill_color "FFFFFF"
     pdf.text translations[language]["vote"], size: 120, style: :bold, :align => :center
     pdf.fill_color "000000"    
@@ -60,7 +60,9 @@ get '/download' do
   end
 
   response.headers['Content-Type'] = "application/pdf"
-  send_file "poster_#{language}_large.pdf"
+  response.headers['Content-Disposition'] = "inline; filename=poster_#{language}_large.pdf;"
+  response.write pdf.render
+
 end
 
 def vip_object(geocoder_object)
