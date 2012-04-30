@@ -50,11 +50,11 @@ get '/download' do
   data[:page_1][:vote] = { :value => translations[language]["vote"]  }
   data[:page_1][:election_date] = { :value => translations[language]["election_date"] }
   data[:page_1][:election_date_value] = { :value => session[:date] }  
-  data[:page_1][:polling_place] = { :value => translations[language]["polling_place"] + session[:polling_name] + session[:polling_address1] + session[:polling_address2] }
+  data[:page_1][:polling_place] = { :value => translations[language]["polling_place"]}
   data[:page_1][:polling_place_value1] = { :value => session[:polling_name]} 
   data[:page_1][:polling_place_value2] = { :value => session[:polling_address1]}   
-  data[:page_1][:more_info] = { :value => translations[language]["more_info"] }
-  data[:page_1][:sms] = { :value => translations[language]["sms"] }      
+  data[:page_1][:more_info] = { :value => translations[language]["more_info"] + " rockthevote.org" }
+  data[:page_1][:sms] = { :value => translations[language]["sms"] + " 1-800-000-0000" }      
   
   pdf = Prawn::Document.generate "poster_#{language}_#{size}.pdf", :template => "public/pdfs/#{size}.pdf"  do |pdf|
     pdf.move_down 300
