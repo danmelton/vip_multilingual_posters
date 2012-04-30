@@ -2417,6 +2417,11 @@ div.formholder{
 /*
 	Posters - Step 3 (Download)
 */
+h2.step3 {
+	background: url(/images/step3.png) top left no-repeat;
+	width: 961px;
+	height: 89px;
+}
 .download h2{
 	text-indent: -9999em;
 }
