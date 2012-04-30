@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 chinese:
     vote: "something"
-    
-=======
+
 arabic:
   vote: "!التصويت"
   election_date: "الانتخابات التي جرت في "
@@ -17,13 +15,13 @@ english:
   more_info: "Don't live here? Look up your polling place at:"
   sms: "or text"
 
-spanish:
-  vote: "¡Vota!"
-  election_date: "Elección de"
-  polling_place: "El centro de votación para esta dirección es:"
-  more_info: "¿No vive aquí? Busque su lugar de votación en"
-  sms: "o enviar un SMS a:"
-  
+arabic:
+  vote: "!التصويت"
+  election_date: "الانتخابات التي جرت في "
+  polling_place: "مركز الاقتراع لهذا العنوان هو"
+  more_info: "لا يعيشون هنا؟ بحث عن مكانك في الاقتراع"
+  sms: "أو بإرسال رسالة قصيرة إلى"
+
 chinese_simplified:
   vote: "投票！"
   election_date: "选举于"
@@ -37,12 +35,6 @@ chinese_traditional:
   polling_place: "投票站此地址是："
   more_info: "不要住在這裡嗎？查找您的投票站地點："
   sms: "或發送短信到："
-
-  vote: ""
-  election_date: ""
-  polling_place: ""
-  more_info: ""
-  sms: ""
 
 croatian:
   vote: "Glasajte!"
@@ -127,7 +119,21 @@ russian:
   polling_place: "Избирательном участке на этот адрес:"
   sms: "Не жить здесь Посмотрите свой ​​избирательный участок по адресу:"
   или отправить смс
- 
+
+serbian:
+  vote: "Гласај!"
+  election_date: "Избори на"
+  polling_place: "Бирачко мјесто за ову адресу је"
+  more_info: "Не живе овде? Потражите своје бирачко место на"
+  sms: "или да пошаље СМС на"
+
+spanish:
+  vote: "¡Vota!"
+  election_date: "Elección de"
+  polling_place: "El centro de votación para esta dirección es:"
+  more_info: "¿No vive aquí? Busque su lugar de votación en"
+  sms: "o enviar un SMS a:"
+
 tamil:
   vote: "வாக்களியுங்கள்!"
   election_date: "தேர்தல் தேதி"
@@ -163,11 +169,10 @@ urdu:
   more_info: "یہاں نہیں رہتے؟ اپ پر اپنے پولنگ کی جگہ کو دیکھو"
   sms: "یا ایک ایس ایم ایس کرنے کے لئے بھیج"
 
-
-vietnamese
+vietnamese:
   vote: "Bình chọn!"
   election_date: "cuộc bầu cử ngày"
   polling_place: "Phòng bỏ phiếu cho địa chỉ này là:"
   more_info: "Không sống ở đây? Tra cứu địa điểm bỏ phiếu của bạn:"
   sms: "hoặc gửi một tin nhắn" 
->>>>>>> aa9c3fa4931499e5c127b6fb3d1b39026da57012
+

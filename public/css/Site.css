@@ -2403,20 +2403,42 @@ button
 
 h2.step1 {
 	background: url(/images/step1.png);
-	width: ;
-	height: ;
+	width: 961px;
+	height: 89px;
+}
+
+
+/*Page One Form*/
+div.formholder{
+    text-align: center;
+    margin-top:25px;
 }
 
 /*
 	Posters - Step 3 (Download)
 */
+h2.step3 {
+	background: url(/images/step3.png) top left no-repeat;
+	width: 961px;
+	height: 89px;
+}
+.download h2{
+	text-indent: -9999em;
+}
+.download .posters{
+	background: #ffffff;
+	border: 1px solid #DEE1E5;
+	padding: 24px;
+	margin-top: 40px;
+}
 
 .download .posters li{
 	display: block;
 	clear: both;
 	font-weight: bold;
-	border-bottom: 1px dashed #c5c5c5;
-	padding: 15px;
+	border-bottom: 1px dotted #D6D6D6;
+	padding: 15px 0;
+	color: #C33;
 }
 .download .downloadLinks{
 	float: right;
@@ -2426,13 +2448,4 @@ h2.step1 {
 .download .size {
 	margin-left: 20px;
 }
-
-
-
-
-
-
-
-
-
 

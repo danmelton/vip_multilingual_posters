@@ -1,17 +1,25 @@
 <%= erb :header %>
 
+<%
+   languages = []
+   params.map do |k, v|
+     if k.match("language")
+       languages << v
+     end
+   end
+
+   session[:languages] = languages
+%>
 <div class="operations download">
-    <h2 class="step1">Step 3: Download  your posters</h2>
-	<ul class="posters">
-		<li class="spanish">
-			Spanish <span class="downloadLinks"><a class="size 3x5" href="">3 x 5</a><a class="size 8x11" href="size2">8.5 x 11</a></span>
-		</li>
-		<li class="hindi">
-			Hindi <span class="downloadLinks"><a class="size 3x5" href="">3 x 5</a><a class="size 8x11" href="size2">8.5 x 11</a></span>
-		</li>
-	</ul>
+  <h2 class="step3">Step 3: Download your posters</h2>
+  <ul class="posters">
+    <% session[:languages].each do |lang| %>
+      <li class="lang">
+        <%= lang.capitalize %> <span class="downloadLinks"><a class="size 3x5" href="">3 x 5</a><a class="size 8x11" href="size2">8.5 x
+        11</a></span>
+      </li>
+    <% end %>
+  </ul>
 </div>
-
-
 
 <%= erb :footer %>
