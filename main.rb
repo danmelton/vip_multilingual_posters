@@ -39,12 +39,13 @@ end
 
 get '/download' do
   
-  language = params[:language].strip!
-  size = params[:size]
+  language = params[:language].strip
+  size = params[:size].strip
   translations = YAML.load(open('files/translations.yml'))
   
   pdf = Prawn::Document.new :template => "public/pdfs/#{size}.pdf"  do |pdf|
     pdf.fill_color "FFFFFF"
+    puts translations[language].inspect
     pdf.text translations[language]["vote"], size: 120, style: :bold, :align => :center
     pdf.fill_color "000000"    
     pdf.text translations[language]["election_date"] + ": " + session[:date], size: 25, style: :bold, :align => :center
