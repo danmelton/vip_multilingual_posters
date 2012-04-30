@@ -1,16 +1,25 @@
 <%= erb :header %>
 
 <div class="operations">
-    <h2 class="step1">Step 2: Select Your Languages & Date</h2>
+  <h2 class="step1">&nbsp;</h2>
 </div>
 
-<form action="step2_submit" method="get" accept-charset="utf-8">
-<%["chinese", "english"].each do |language|%>
-  <input type="checkbox" name="language" value="<%=language%>"><%=language%><br> 
-<% end %>
-  <p><input type="submit" value="Step 3: Download Posters"></p>
+<form action="step3" method="get" accept-charset="utf-8">
+  <h2>Step 2: Select Your Languages & Date</h2>
+  <h4>Please select 1 or more languages</h4>
+  <% @languages.each do |language| %>
+    <input type="checkbox" name="language" value="<%= language %>"><%= language %>
+    <br>
+  <% end %>
+  <div style="margin-top: 25px;">
+    What time does the Polling Location open?
+    <p><input type="text" value="8:00am"></p>
+    <br/>
+    What time does the Polling Location close?
+    <p><input type="text" value="8:00pm"></p>
+  </div>
+
+  <p><input type="submit" value="Next Step >>"></p>
 </form>
-
-
 
 <%= erb :footer %>
