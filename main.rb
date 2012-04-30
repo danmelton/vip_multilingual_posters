@@ -18,9 +18,6 @@ end
 
 get '/step2' do
   session[:address] = params[:address]
-  session[:date] = params[:date]
-  session[:time1] = params[:time2]
-  session[:time2] = params[:time2]
   address = Geocoder.search(params[:address])
   location = vip_object(address.first)
   session[:polling_name] = location["Address"]["LocationName"]
@@ -32,10 +29,10 @@ get '/step2' do
 end
 
 get '/step3' do
-  
+  session[:date] = params[:date]
+  session[:time1] = params[:time2]
+  session[:time2] = params[:time2]  
   session[:languages] = params[:language]
-
-
   
   erb :step3
 end
@@ -49,7 +46,6 @@ get '/download' do
   data[:page_1] = {}
   data[:page_1][:vote] = { :value => translations[language]["vote"]  }
   data[:page_1][:election_date] = { :value => translations[language]["election_date"] }
-  data[:page_1][:election_date_value] = { :value => session[:date] }  
   data[:page_1][:polling_place] = { :value => translations[language]["polling_place"]}
   data[:page_1][:polling_place_value1] = { :value => session[:polling_name]} 
   data[:page_1][:polling_place_value2] = { :value => session[:polling_address1]}   
@@ -57,11 +53,19 @@ get '/download' do
   data[:page_1][:sms] = { :value => translations[language]["sms"] + " 1-800-000-0000" }      
   
   pdf = Prawn::Document.generate "poster_#{language}_#{size}.pdf", :template => "public/pdfs/#{size}.pdf"  do |pdf|
-    pdf.move_down 300
-    pdf.fill_form_with(data)
-    pdf.image open(google_map(session[:polling_coordinates])), :fit => [250, 250]
+    pdf.text translations[language]["vote"], size: 150, style: :bold, :text_color => 'FFFFFF', :align => :center
+    pdf.text translations[language]["election_date"] + ": " + session[:date], size: 25, style: :bold, :text_color => 'FFFFFF', :align => :center
+    pdf.move_down 10    
+    pdf.text translations[language]["polling_place"], size: 25, style: :bold, :text_color => 'FFFFFF', :align => :center
+    pdf.text session[:polling_name], size: 20, style: :bold, :text_color => 'FFFFFF', :align => :center
+    pdf.text session[:polling_address1], size: 20, style: :bold, :text_color => 'FFFFFF', :align => :center
+    pdf.move_down 10
+    pdf.image open(google_map(session[:polling_coordinates])), :fit => [250, 250], :position => :center
+    pdf.move_down 50
+    pdf.text translations[language]["more_info"] + " rockthevote.org", size: 20, style: :bold, :text_color => 'FFFFFF', :align => :center
+    pdf.text translations[language]["sms"] + " 1-800-000-0000", size: 20, style: :bold, :text_color => 'FFFFFF', :align => :center
   end
-  
+
 end
 
 def vip_object(geocoder_object)
