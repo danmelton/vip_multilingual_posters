@@ -1,17 +1,26 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    Ascii85 (1.0.1)
     geocoder (1.1.1)
     json (1.7.0)
-    pdf-stamper (0.3.0)
+    pdf-reader (1.1.0)
+      Ascii85 (~> 1.0.0)
+      ruby-rc4
+    prawn (0.12.0)
+      pdf-reader (>= 0.9.0)
+      ttfunk (~> 1.0.2)
+    prawn-fillform (0.0.12)
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
+    ruby-rc4 (0.1.5)
     sinatra (1.3.2)
       rack (~> 1.3, >= 1.3.6)
       rack-protection (~> 1.2)
       tilt (~> 1.3, >= 1.3.3)
     tilt (1.3.3)
+    ttfunk (1.0.3)
 
 PLATFORMS
   ruby
@@ -19,5 +28,6 @@ PLATFORMS
 DEPENDENCIES
   geocoder
   json
-  pdf-stamper
+  prawn
+  prawn-fillform
   sinatra
