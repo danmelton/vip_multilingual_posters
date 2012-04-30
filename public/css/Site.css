@@ -2072,19 +2072,19 @@ button {
 }
 
 h2.step1 {
-    background: url(/images/step1.png);
+    background: url(/images/step1.png) top left no-repeat;
     width: 880px;
     height: 81px;
 }
 
 h2.step2 {
-    background: url(/images/step2.png);
+    background: url(/images/step2.png) top left no-repeat;
     width: 880px;
     height: 81px;
 }
 
 h2.step3 {
-    background: url(/images/step3.png);
+    background: url(/images/step3.png) top left no-repeat;
     width: 880px;
     height: 81px;
 }
@@ -2104,14 +2104,24 @@ div.formholder {
 }
 
 /*
-	Posters - Step 3 (Download)
+	Posters 
 */
-
-h2.step3 {
-	background: url(/images/step3.png) top left no-repeat;
-	width: 880px;
-	height: 89px;
+.module {
+    background: #ffffff;
+    border: 1px solid #DEE1E5;
+    padding: 24px;
+    margin-top: 40px;	
 }
+.selectLanguages form li ul{
+	-moz-column-count: 3;
+	-moz-column-gap: 20px;
+	-webkit-column-count: 3;
+	-webkit-column-gap: 20px;
+	column-count: 3;
+	column-gap: 20px;
+	margin-bottom: 20px;
+}
+
 .download h2{
 	text-indent: -9999em;
 }
@@ -2141,3 +2151,36 @@ h2.step3 {
     margin-left: 20px;
 }
 
+.selectLanguages input[type="submit"]{
+	background-color: #386097;
+	display: block;
+	border: none;
+	color: #ffffff;
+	text-transform: lowercase;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin-top: 20px;
+	clear: both;
+	padding: 3px 15px 6px 15px;
+}
+.selectLanguages .time{
+	width: 45%;
+	float: left;
+	margin-right: 5%;
+}
+.selectLanguages .time input{
+	width: 100%;
+}
+.selectLanguages .clear {
+	clear: both;
+}
+
+.selectLanguages legend{
+	border-bottom: none;
+	font: bold 0.916666666666667em/1.454545454545455em "Helvetica Neue", Helvetica, Arial, sans-serif;
+	letter-spacing: 0.2em;
+	margin: 0 0 10px;
+	padding-top: 30px;
+	text-transform: uppercase;
+}
