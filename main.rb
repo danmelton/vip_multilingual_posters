@@ -45,7 +45,8 @@ get '/step3' do
 end
 
 get '/download' do
-  
+  response.headers['Content-Type'] = "application/pdf"
+  send_file 'poster_language_large.pdf'
 end
 
 def vip_object(geocoder_object)
