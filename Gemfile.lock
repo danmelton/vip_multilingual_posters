@@ -2,6 +2,8 @@ GEM
   remote: http://rubygems.org/
   specs:
     geocoder (1.1.1)
+    json (1.7.0)
+    pdf-stamper (0.3.0)
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
@@ -16,4 +18,6 @@ PLATFORMS
 
 DEPENDENCIES
   geocoder
+  json
+  pdf-stamper
   sinatra

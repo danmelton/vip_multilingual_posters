@@ -1,3 +1,13 @@
+chinese:
+    vote: "something"
+
+arabic:
+  vote: "!التصويت"
+  election_date: "الانتخابات التي جرت في "
+  polling_place: "مركز الاقتراع لهذا العنوان هو"
+  more_info: "لا يعيشون هنا؟ بحث عن مكانك في الاقتراع"
+  sms: "أو بإرسال رسالة قصيرة إلى"
+
 english: 
   vote: "Vote!"
   election_date: "Election on"
@@ -159,10 +169,10 @@ urdu:
   more_info: "یہاں نہیں رہتے؟ اپ پر اپنے پولنگ کی جگہ کو دیکھو"
   sms: "یا ایک ایس ایم ایس کرنے کے لئے بھیج"
 
-
-vietnamese
+vietnamese:
   vote: "Bình chọn!"
   election_date: "cuộc bầu cử ngày"
   polling_place: "Phòng bỏ phiếu cho địa chỉ này là:"
   more_info: "Không sống ở đây? Tra cứu địa điểm bỏ phiếu của bạn:"
   sms: "hoặc gửi một tin nhắn" 
+

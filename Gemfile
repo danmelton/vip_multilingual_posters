@@ -1,3 +1,6 @@
 source 'http://rubygems.org'
 gem 'sinatra'
 gem 'geocoder'
+gem 'json'
+gem 'prawn'
+gem 'prawn-fillform'
