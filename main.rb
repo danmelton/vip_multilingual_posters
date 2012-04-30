@@ -8,7 +8,8 @@ end
 
 get '/step2' do
   "Step 2: Select a Language"
-  erb :step2  
+  @languages = load_languages
+  erb :step2
 end
 
 get '/step3' do
@@ -19,3 +20,9 @@ end
 def geocode(address)
   Geocoder
 end
+
+def load_languages
+  text = File.open("files/languages.yml", "r").read.gsub('"', "")
+  text.split(",")
+end
+

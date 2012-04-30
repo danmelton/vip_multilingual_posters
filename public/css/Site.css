@@ -2413,3 +2413,30 @@ div.formholder{
     text-align: center;
     margin-top:25px;
 }
+
+/*
+	Posters - Step 3 (Download)
+*/
+.download .posters{
+	background: #ffffff;
+	border: 1px solid #DEE1E5;
+	padding: 24px;
+}
+
+.download .posters li{
+	display: block;
+	clear: both;
+	font-weight: bold;
+	border-bottom: 1px dotted #D6D6D6;
+	padding: 15px 0;
+	color: #C33;
+}
+.download .downloadLinks{
+	float: right;
+	display: block;
+}
+
+.download .size {
+	margin-left: 20px;
+}
+
