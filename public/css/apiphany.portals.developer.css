@@ -1,0 +1,177 @@
+﻿/*-------------------------------------------------COMMON-----------------------------------------------*/
+.apiphany fieldset textarea, .apiphany form textarea
+{
+    min-height: 80px;
+    resize: vertical;
+    overflow-y: scroll;
+}
+
+.apiphany aside
+{
+    float: left;
+    display: block;
+    padding: 5px;
+}
+
+.apiphany article
+{
+    display: block;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.apiphany .left
+{
+    float: left;
+}
+
+.apiphany .right
+{
+    float: right;
+}
+
+.apiphany .clear, .apiphany hr
+{
+    clear: both;
+}
+
+.apiphany .progress
+{
+    background-image: url(/modules/apiphany.portals.core/content/images/progress.gif);
+    width: 100%;
+    height: 4px;
+    position: relative;
+    z-index: 1000;
+}
+
+.apiphany .blur
+{
+    color: #C0C0C0;
+    font-style: italic;
+    font-family: Segoe UI !important;
+}
+
+/*-------------------------------------------------PAGER------------------------------------------------*/
+.apiphany .pager
+{
+    background-color: inherit;
+    display: block;
+    overflow: hidden;
+    margin: 20px 0px 20px 0px;
+}
+
+.apiphany .pager a
+{
+    display: block;
+    background-color: #CCCCCC;
+    color: white;
+    padding: 7px;
+    border-radius: 3px;
+    float: left;
+}
+
+.apiphany .pager a:hover
+{
+    background-color: #CCCCCC;
+    color: white;
+}
+
+.apiphany .pager a[href]
+{
+    background-color: inherit;
+    color: inherit;
+}
+
+.apiphany .pager a[href]:hover
+{
+    background-color: gray;
+    color: white;
+}
+
+/*-------------------------------------------------SEARCH----------------------------------------------*/
+.apiphany .search
+{
+    overflow: hidden;
+}
+
+.apiphany .search label
+{
+    display: block;
+}
+
+.apiphany .search input
+{
+    width: 160px;
+    float: left;
+}
+
+.apiphany .search button.action
+{
+    float: left;
+    background-color: white;
+    background-image: url(../content/images/search-icon.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    padding: 0;
+    margin: 2px;
+    height: 27px;
+    width: 24px;
+    cursor: pointer;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.apiphany .action.search, .action.search:hover
+{
+    width: 24px;
+    height: 27px;
+    background-color: white;
+    border: 0px none;
+    background-image: url(../content/Images/search-icon.png);
+    background-repeat: no-repeat;
+    margin: 0px 2px 0px 0px;
+    padding: 0px;
+    position: relative;
+    line-height: 0px;
+}
+
+.apiphany .commands, .labelkey
+{
+    white-space: nowrap;
+}
+
+
+
+.apiphany .validation-summary-errors
+{
+    background-color: #FF5050;
+    color: #FFFFFF;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.apiphany .validation-summary-errors ul
+{
+    list-style: disc;
+    margin-left: 17px;
+}
+
+.apiphany .description
+{
+    color: #999999;
+}
+
+.apiphany .dialog
+{
+    display: none;
+}
+
+.apiphany address
+{
+    font-style: normal;
+    color: #999999;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+}
