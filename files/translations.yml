@@ -22,7 +22,7 @@ Filipino:
 Russian:
   vote: "Голосуй!"
   election_date: "Выборы Дата"
-  polling_place:"Избирательном участке на этот адрес:"
+  polling_place: "Избирательном участке на этот адрес:"
   sms: "Не жить здесь Посмотрите свой ​​избирательный участок по адресу:"
   или отправить смс
  
@@ -35,14 +35,14 @@ Tamil:
 
 Thai:  
   vote: "โหวต"
-  election_date:"วันที่การเลือกตั้ง"
+  election_date: "วันที่การเลือกตั้ง"
   polling_place: "หน่วยเลือกตั้งสำหรับที่อยู่นี้คือ"
   more_info: "ไม่อยู่ที่นี่เงยหน้าขึ้นมองสถานที่ที่หน่วยเลือกตั้งที่:"
   sms:  "หรือส่ง sms ไป"
   
 Turkish:
   vote: "Oy verin!"
-  election_date:"Seçim Tarihi"
+  election_date: "Seçim Tarihi"
   polling_place: "Bu adres için sandık şudur:"
   more_info: "Burada yaşamıyor musunuz adresinden seçim yerini Look up:?"
   sms: "veya bir sms"
