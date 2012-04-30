@@ -2417,10 +2417,14 @@ div.formholder{
 /*
 	Posters - Step 3 (Download)
 */
+.download h2{
+	text-indent: -9999em;
+}
 .download .posters{
 	background: #ffffff;
 	border: 1px solid #DEE1E5;
 	padding: 24px;
+	margin-top: 40px;
 }
 
 .download .posters li{
