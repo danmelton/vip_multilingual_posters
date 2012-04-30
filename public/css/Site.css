@@ -2089,10 +2089,18 @@ h2.step3 {
     height: 81px;
 }
 
-/*Page One Form*/
+/*
+Page One Form
+*/
 div.formholder {
     text-align: center;
     margin-top: 25px;
+}
+
+.biginputfield {
+    width: 200px;
+
+
 }
 
 /*
