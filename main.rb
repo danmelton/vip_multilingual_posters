@@ -44,17 +44,19 @@ get '/download' do
   translations = YAML.load(open('files/translations.yml'))
   
   pdf = Prawn::Document.generate "poster_#{language}_#{size}.pdf", :template => "public/pdfs/#{size}.pdf"  do |pdf|
-    pdf.text translations[language]["vote"], size: 120, style: :bold, :text_color => 'FFFFFF', :align => :center
-    pdf.text translations[language]["election_date"] + ": " + session[:date], size: 25, style: :bold, :text_color => 'FFFFFF', :align => :center
+    pdf.fill_color "FFFFFF"
+    pdf.text translations[language]["vote"], size: 120, style: :bold, :align => :center
+    pdf.fill_color "000000"    
+    pdf.text translations[language]["election_date"] + ": " + session[:date], size: 25, style: :bold, :align => :center
     pdf.move_down 10    
-    pdf.text translations[language]["polling_place"], size: 25, style: :bold, :text_color => 'FFFFFF', :align => :center
-    pdf.text session[:polling_name], size: 20, style: :bold, :text_color => 'FFFFFF', :align => :center
-    pdf.text session[:polling_address1], size: 20, style: :bold, :text_color => 'FFFFFF', :align => :center
+    pdf.text translations[language]["polling_place"], size: 25, style: :bold, :align => :center
+    pdf.text session[:polling_name], size: 20, style: :bold, :align => :center
+    pdf.text session[:polling_address1], size: 20, style: :bold, :align => :center
     pdf.move_down 10
     pdf.image open(google_map(session[:polling_coordinates])), :fit => [250, 250], :position => :center
     pdf.move_down 70
-    pdf.text translations[language]["more_info"] + " rockthevote.org", size: 20, style: :bold, :text_color => 'FFFFFF', :align => :center
-    pdf.text translations[language]["sms"] + " 1-800-000-0000", size: 20, style: :bold, :text_color => 'FFFFFF', :align => :center
+    pdf.text translations[language]["more_info"] + " rockthevote.org", size: 20, style: :bold, :align => :center
+    pdf.text translations[language]["sms"] + " 1-800-000-0000", size: 20, style: :bold, :align => :center
   end
 
   response.headers['Content-Type'] = "application/pdf"
