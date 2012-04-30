@@ -39,8 +39,8 @@ end
 
 get '/download' do
   
-  language = params[:language]
-  size = params[:size]  
+  language = params[:language].strip!
+  size = params[:size]
   translations = YAML.load(open('files/translations.yml'))
   
   pdf = Prawn::Document.generate "poster_#{language}_#{size}.pdf", :template => "public/pdfs/#{size}.pdf"  do |pdf|
