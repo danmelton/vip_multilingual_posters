@@ -12,6 +12,9 @@ spanish:
   more_info: "¿No vive aquí? Busque su lugar de votación en"
   sms: "o enviar un SMS a:"
   
+chinese_simplified:
+  vote: "投票！"
+
 croatian:
   vote: "Glasajte!"
   election_date: "Izborna na"
