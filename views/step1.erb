@@ -1,13 +1,25 @@
 <%= erb :header %>
-<h1>Enter a Location</h1>
+<h1>Enter an Address</h1>
 <div class="operations">
-    <h2 class="step1">Step 1: Enter a Location</h2>
-    <form action="step2" method="get" accept-charset="utf-8">
-      <input type="text" name="address" value="" id="address">
 
-      <p><input type="submit" value="Next Step >>"></p>
-    </form>
+	<h2 class="step1"></h2>
+
+    <div class="formholder">
+
+      <form action="step2" method="get" accept-charset="utf-8">
+         <input type="text" name="address" placeholder="Enter Your Address Here" id="address">
+         <input type="submit" value="Go!">
+      </form>
+
+    </div>
+
 </div>
 
 
 <%= erb :footer %>
+
+
+Enter Address
+
+
+880 and 960, 40 px margin on each side
