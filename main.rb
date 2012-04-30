@@ -4,6 +4,7 @@ require 'geocoder'
 require 'json'
 require 'sinatra'
 require 'prawn' 
+require 'yaml'
 require 'prawn-fillform'
 
 enable :sessions
@@ -30,21 +31,38 @@ get '/step2' do
 end
 
 get '/step3' do
-  puts session.inspect
+  
   session[:languages] = params[:language]
-  
-  data = {}
-  data[:page_1] = {}
-  data[:page_1][:vote] = { :value => "Vote Now" }
-  
-  Prawn::Document.generate "poster_language_large.pdf", :template => pdf  do |pdf|
-    pdf.fill_form_with(data)
-  end
+
+
   
   erb :step3
 end
 
 get '/download' do
+  
+  language = params[:language]
+  size = params[:size]  
+  translations = YAML.load(open('files/translations.yml'))
+  data = {}
+  data[:page_1] = {}
+  data[:page_1][:vote] = { :value => translations[language]["vote"]  }
+  data[:page_1][:election_date] = { :value => translations[language]["election_date"] }
+  data[:page_1][:polling_place] = { :value => translations[language]["polling_place"] + session[:polling_name] + session[:polling_address1] + session[:polling_address2] }
+  data[:page_1][:more_info] = { :value => translations[language]["more_info"] }
+  data[:page_1][:sms] = { :value => translations[language]["sms"] }      
+  puts data.inspect
+  
+  
+  pdf = Prawn::Document.generate "poster_#{language}_#{size}.pdf", :template => "public/pdfs/#{size}.pdf"  do |pdf|
+    pdf.fill_form_with(data)
+    pdf.move_down 100
+    pdf.text "Love you"
+  end
+  
+  send_file pdf
+  
+
   
 end
 
