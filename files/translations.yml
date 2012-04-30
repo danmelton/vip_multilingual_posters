@@ -81,6 +81,13 @@ haitian_creole:
   more_info: "Pa rete isit la? Gade ki kote biwo vòt ou a nan"
   sms: "oswa voye yon SMS a"
 
+japanese:
+  vote: "投票！"
+  election_date: "の選挙"
+  polling_place: "このアドレスのポーリングステーションは、次のとおりです。"
+  more_info: "ここに住んでないのですか？であなたの投票所を調べる："
+  sms: "またはSMSを送る。"
+
 korean:
   vote: "투표하세요!"
   election_date: "에 대한 선거"
@@ -143,6 +150,14 @@ ukrainian:
   polling_place: "Виборчому ділянці на цю адресу:"
   more_info:"Не жити тут Подивіться свою виборчу дільницю за адресою:"
   sms: "Або відправити смс"
+
+urdu:
+  vote: "!ووٹ ڈالنے"
+  election_date: "پر انتخاب"
+  polling_place: "اس پتے کے لیے پولنگ سٹیشن ہے"
+  more_info: "یہاں نہیں رہتے؟ اپ پر اپنے پولنگ کی جگہ کو دیکھو"
+  sms: "یا ایک ایس ایم ایس کرنے کے لئے بھیج"
+
 
 vietnamese
   vote: "Bình chọn!"
