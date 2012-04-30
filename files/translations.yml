@@ -1,18 +1,25 @@
-English: 
+english: 
   vote: "Vote!"
   election_date: "Election on"
   polling_place: "The polling station for this address is:"
   more_info: "Don't live here? Look up your polling place at:"
   sms: "or text"
 
-Spanish:
+spanish:
   vote: "¡Vota!"
   election_date: "Elección de"
   polling_place: "El centro de votación para esta dirección es:"
-  more_info:
+  more_info: "¿No vive aquí? Busque su lugar de votación en"
+  sms: "o enviar un SMS a:"
+  
+croatian:
+  vote: "Glasajte!"
+  election_date: "Izborna na"
+  polling_place: "Biračko mjesto na ovoj adresi je:"
+  more_info: "Nemojte živjeti ovdje? Potražite svoje mjesto Izjašnjavanje na:"
+  sms: "ili pošaljite SMS na:"
 
-
-Filipino:
+filipino:
   vote: "Bumoto!"
   election_date: "Halalan Petsa"
   polling_place: "Ang mga istasyon ng botohan para sa address na ito ay:"
