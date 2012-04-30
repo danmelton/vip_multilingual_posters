@@ -4,6 +4,7 @@ require 'geocoder'
 require 'json'
 require 'sinatra'
 require 'prawn' 
+require 'cgi'
 require 'yaml'
 require 'prawn-fillform'
 
@@ -23,7 +24,7 @@ get '/step2' do
   address = Geocoder.search(params[:address])
   location = vip_object(address.first)
   session[:polling_name] = location["Address"]["LocationName"]
-  session[:polling_ccoordinates] = location["Address"]["Lat"].to_s + "," + location["Address"]["Lon"].to_s
+  session[:polling_coordinates] = location["Address"]["Lat"].to_s + "," + location["Address"]["Lon"].to_s
   session[:polling_address1] = location["Address"]["Line1"]
   session[:polling_address2] = location["Address"]["City"] + ", " +location["Address"]["State"] + " " + location["Address"]["Zip"]   
   @languages = load_languages
@@ -48,21 +49,18 @@ get '/download' do
   data[:page_1] = {}
   data[:page_1][:vote] = { :value => translations[language]["vote"]  }
   data[:page_1][:election_date] = { :value => translations[language]["election_date"] }
+  data[:page_1][:election_date_value] = { :value => session[:date] }  
   data[:page_1][:polling_place] = { :value => translations[language]["polling_place"] + session[:polling_name] + session[:polling_address1] + session[:polling_address2] }
+  data[:page_1][:polling_place_value1] = { :value => session[:polling_name]} 
+  data[:page_1][:polling_place_value2] = { :value => session[:polling_address1]}   
   data[:page_1][:more_info] = { :value => translations[language]["more_info"] }
   data[:page_1][:sms] = { :value => translations[language]["sms"] }      
-  puts data.inspect
-  
   
   pdf = Prawn::Document.generate "poster_#{language}_#{size}.pdf", :template => "public/pdfs/#{size}.pdf"  do |pdf|
+    pdf.move_down 300
     pdf.fill_form_with(data)
-    pdf.move_down 100
-    pdf.text "Love you"
+    pdf.image open(google_map(session[:polling_coordinates])), :fit => [250, 250]
   end
-  
-  send_file pdf
-  
-
   
 end
 
@@ -80,7 +78,7 @@ end
 
 
 def google_map(latlon)
-  "http://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=16&size=512x512&maptype=roadmap&markers=icon:http://chart.apis.google.com/chart?chst=d_bubble_text_small%26chld=bb%257CVote Here!%257CFFFF88%257C000000|"+latlon+"&sensor=false"
+  "http://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=16&size=512x512&maptype=roadmap&markers=icon:http://chart.apis.google.com/chart?chst=d_bubble_text_small%26chld=bb%257CVote!%257CFFFF88%257C000000%7c"+latlon+"&sensor=false"
 end
 
 def load_languages
