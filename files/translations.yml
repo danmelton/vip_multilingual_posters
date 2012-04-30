@@ -11,14 +11,6 @@ Spanish:
   polling_place: "El centro de votación para esta dirección es:"
   more_info:
 
-  
-Russian:
-  vote: "Голосуй!"
-  election_date: "Выборы Дата"
-  polling_place:"Избирательном участке на этот адрес:"
-  sms: "Не жить здесь Посмотрите свой ​​избирательный участок по адресу:"
-  или отправить смс
- 
 
 Filipino:
   vote: "Bumoto!"
@@ -27,6 +19,13 @@ Filipino:
   more_info: "Huwag nakatira dito Hanapin ang iyong lugar ng botohan sa:?"
   sms: "o magpadala ng sms sa"
 
+Russian:
+  vote: "Голосуй!"
+  election_date: "Выборы Дата"
+  polling_place:"Избирательном участке на этот адрес:"
+  sms: "Не жить здесь Посмотрите свой ​​избирательный участок по адресу:"
+  или отправить смс
+ 
 Tamil:
   vote: "வாக்களியுங்கள்!"
   election_date: "தேர்தல் தேதி"
