@@ -1,25 +1,42 @@
 <%= erb :header %>
 
-<div class="operations">
-  <h2 class="step2">&nbsp;</h2>
+	<div class="operations">
+	  <h2 class="step2">&nbsp;</h2>
+	</div>
+<div class="selectLanguages module">
+
+	<form action="step3" method="get" accept-charset="utf-8">
+		<ul>
+			<li>
+				<legend>Please select 1 or more languages:</legend>
+				<ul>
+					<% @languages.each_with_index do |language, i| %>
+					<li>
+						<input type="checkbox" name="language<%= i %>" value="<%= language %>"> <%= language %>
+					</li>
+					<% end %>
+				</ul>
+			</li>
+			<li>
+				<legend>When is your polling place open?</legend>
+				<div class="time">	
+					<label>What time does the Polling Location open?</label>
+					<input type="text" value="8:00am">
+				</div>
+				<div class="time">	
+					<label>What time does the Polling Location close?</label>
+					<input type="text" value="8:00pm">
+				</div>
+			</li>
+			<li>
+				<div class="clear"></div>
+				<input type="submit" value="Next Step &#187;">
+			</li>
+		</ul>
+	</form>
+	<p>
+		All translations can be seen on <a href="https://github.com/danmelton/vip_multilingual_posters/blob/master/files/translations.yml">here</a> on github.
+	</p>
 </div>
-
-<form action="step3" method="get" accept-charset="utf-8">
-  <h2 style="margin-bottom: 25px;">Step 2: Select Your Languages & Date</h2>
-  <div style="margin-bottom: 15px; font-weight: bold;">Please select 1 or more languages:</div>
-  <% @languages.each_with_index do |language, i| %>
-    <input type="checkbox" name="language<%= i %>" value="<%= language %>"> <%= language %>
-    <br>
-  <% end %>
-  <div style="margin-top: 25px;">
-    What time does the Polling Location open?
-    <p><input type="text" value="8:00am"></p>
-    <br/>
-    What time does the Polling Location close?
-    <p><input type="text" value="8:00pm"></p>
-  </div>
-
-  <p><input type="submit" value="Next Step >>"></p>
-</form>
 
 <%= erb :footer %>
