@@ -1,3 +1,173 @@
+<<<<<<< HEAD
 chinese:
     vote: "something"
     
+=======
+arabic:
+  vote: "!التصويت"
+  election_date: "الانتخابات التي جرت في "
+  polling_place: "مركز الاقتراع لهذا العنوان هو"
+  more_info: "لا يعيشون هنا؟ بحث عن مكانك في الاقتراع"
+  sms: "أو بإرسال رسالة قصيرة إلى"
+
+english: 
+  vote: "Vote!"
+  election_date: "Election on"
+  polling_place: "The polling station for this address is:"
+  more_info: "Don't live here? Look up your polling place at:"
+  sms: "or text"
+
+spanish:
+  vote: "¡Vota!"
+  election_date: "Elección de"
+  polling_place: "El centro de votación para esta dirección es:"
+  more_info: "¿No vive aquí? Busque su lugar de votación en"
+  sms: "o enviar un SMS a:"
+  
+chinese_simplified:
+  vote: "投票！"
+  election_date: "选举于"
+  polling_place: "投票站此地址是:"
+  more_info: "不要住在这里吗？查找您的投票站地点:"
+  sms: "或发送短信到"
+
+chinese_traditional:
+  vote: "投票！"
+  election_date: "選舉於"
+  polling_place: "投票站此地址是："
+  more_info: "不要住在這裡嗎？查找您的投票站地點："
+  sms: "或發送短信到："
+
+  vote: ""
+  election_date: ""
+  polling_place: ""
+  more_info: ""
+  sms: ""
+
+croatian:
+  vote: "Glasajte!"
+  election_date: "Izborna na"
+  polling_place: "Biračko mjesto na ovoj adresi je:"
+  more_info: "Nemojte živjeti ovdje? Potražite svoje mjesto Izjašnjavanje na:"
+  sms: "ili pošaljite SMS na:"
+
+filipino:
+  vote: "Bumoto!"
+  election_date: "Halalan Petsa"
+  polling_place: "Ang mga istasyon ng botohan para sa address na ito ay:"
+  more_info: "Huwag nakatira dito Hanapin ang iyong lugar ng botohan sa:?"
+  sms: "o magpadala ng sms sa"
+
+french:
+  vote: "Votez!"
+  election_date: "Élection de"
+  polling_place: "Le bureau de vote pour cette adresse est la suivante:"
+  more_info: "Vous ne vivez pas ici? Recherchez votre lieu de vote ici:"
+  sms: "ou envoyez un SMS à:"
+
+german:
+  vote: "Stimmen Sie ab!"
+  election_date: "Wahl am"
+  polling_place: "Das Wahllokal für diese Adresse ist"
+  more_info: "Nicht hier zu leben? Suchen Sie nach Ihrem Wahllokal an"
+  sms: "oder senden Sie eine SMS an"
+
+hindi:
+  vote: "वोट दें!"
+  election_date: "पर चुनाव"
+  polling_place: "इस पते के लिए मतदान केंद्र है:"
+  more_info: "यहाँ नहीं रहते हैं? पर अपने मतदान जगह देखो:"
+  sms: "या एक एसएमएस भेजने के लिए:"
+
+haitian_creole:
+  vote: "Vote!"
+  election_date: "Eleksyon sou"
+  polling_place: "Estasyon nan biwo vòt pou adrès sa a se"
+  more_info: "Pa rete isit la? Gade ki kote biwo vòt ou a nan"
+  sms: "oswa voye yon SMS a"
+
+japanese:
+  vote: "投票！"
+  election_date: "の選挙"
+  polling_place: "このアドレスのポーリングステーションは、次のとおりです。"
+  more_info: "ここに住んでないのですか？であなたの投票所を調べる："
+  sms: "またはSMSを送る。"
+
+korean:
+  vote: "투표하세요!"
+  election_date: "에 대한 선거"
+  polling_place: "이 주소에 대한 폴링 역은 다음과 같습니다"
+  more_info: "여기 살지 않나요? 귀하의 투표소를보세요"
+  sms: "또는 SMS로 보내주십시오"
+
+persian:
+  vote: "!رای دهید"
+  election_date: "انتخابات در"
+  polling_place: "ایستگاه رای گیری برای این آدرس است"
+  more_info: "اینجا زندگی نمی کنند؟ نگاه کردن به محل رای دهی خود را در"
+  sms: "و یا ارسال اس ام اس"
+
+polish:
+  vote: "Głosuj!"
+  election_date: "Wybory na"
+  polling_place: "Lokal wyborczy dla tego adresu jest"
+  more_info: "Nie mieszka tu? Sprawdzić swoją lokalu wyborczym w"
+  sms: "lub wysłać SMS do"
+
+portuguese:
+  vote: "Votar!"
+  election_date: "Eleição em"
+  polling_place: "A assembleia de voto para este endereço é"
+  more_info: "Não vivem aqui? Procure o seu local de votação em"
+  sms: "ou enviar um SMS para"
+
+russian:
+  vote: "Голосуй!"
+  election_date: "Выборы Дата"
+  polling_place: "Избирательном участке на этот адрес:"
+  sms: "Не жить здесь Посмотрите свой ​​избирательный участок по адресу:"
+  или отправить смс
+ 
+tamil:
+  vote: "வாக்களியுங்கள்!"
+  election_date: "தேர்தல் தேதி"
+  polling_place: "இந்த முகவரியில் தேர்தல் நிலையம்:"
+  more_info: "இங்கே வாழ வேண்டாம் உங்கள் தேர்தல் இடத்தை பாருங்கள்:?"
+  sms:   "அல்லது ஒரு எஸ்எம்எஸ் அனுப்ப"
+
+thai:  
+  vote: "โหวต"
+  election_date: "วันที่การเลือกตั้ง"
+  polling_place: "หน่วยเลือกตั้งสำหรับที่อยู่นี้คือ"
+  more_info: "ไม่อยู่ที่นี่เงยหน้าขึ้นมองสถานที่ที่หน่วยเลือกตั้งที่:"
+  sms:  "หรือส่ง sms ไป"
+  
+turkish:
+  vote: "Oy verin!"
+  election_date: "Seçim Tarihi"
+  polling_place: "Bu adres için sandık şudur:"
+  more_info: "Burada yaşamıyor musunuz adresinden seçim yerini Look up:?"
+  sms: "veya bir sms"
+
+ukrainian:
+  vote: "Голосуй!"
+  election_date: "Вибори Дата"
+  polling_place: "Виборчому ділянці на цю адресу:"
+  more_info:"Не жити тут Подивіться свою виборчу дільницю за адресою:"
+  sms: "Або відправити смс"
+
+urdu:
+  vote: "!ووٹ ڈالنے"
+  election_date: "پر انتخاب"
+  polling_place: "اس پتے کے لیے پولنگ سٹیشن ہے"
+  more_info: "یہاں نہیں رہتے؟ اپ پر اپنے پولنگ کی جگہ کو دیکھو"
+  sms: "یا ایک ایس ایم ایس کرنے کے لئے بھیج"
+
+
+vietnamese
+  vote: "Bình chọn!"
+  election_date: "cuộc bầu cử ngày"
+  polling_place: "Phòng bỏ phiếu cho địa chỉ này là:"
+  more_info: "Không sống ở đây? Tra cứu địa điểm bỏ phiếu của bạn:"
+  sms: "hoặc gửi một tin nhắn" 
+>>>>>>> aa9c3fa4931499e5c127b6fb3d1b39026da57012

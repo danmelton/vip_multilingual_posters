@@ -2406,3 +2406,33 @@ h2.step1 {
 	width: ;
 	height: ;
 }
+
+/*
+	Posters - Step 3 (Download)
+*/
+
+.download .posters li{
+	display: block;
+	clear: both;
+	font-weight: bold;
+	border-bottom: 1px dashed #c5c5c5;
+	padding: 15px;
+}
+.download .downloadLinks{
+	float: right;
+	display: block;
+}
+
+.download .size {
+	margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
