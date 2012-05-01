@@ -11,7 +11,9 @@
    session[:languages] = languages
 %>
 <div class="operations download">
-  <h2 class="step3">Step 3: Download your posters</h2>
+  <a href="/step2">
+    <h2 class="step3">Step 3: Download your posters</h2>
+  </a>
   <ul class="posters">
     <% if session[:languages].length > 0 %>
       <% session[:languages].each do |lang| %>
