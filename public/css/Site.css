@@ -160,12 +160,12 @@ hr, .skip, .ineffable {
 /*-  Intro
 ----------------------------------------------------------------------*/
 #intro h1 {
-    height: 242px;
-    left: -31px;
-    position: absolute;
-    top: -69px;
-    width: 465px;
-    z-index: 1;
+	height: 242px;
+	left: -3px;
+	position: absolute;
+	top: -85px;
+	width: 465px;
+	z-index: 1;
 }
 
 #intro h2 {
