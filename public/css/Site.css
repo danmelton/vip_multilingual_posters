@@ -2253,3 +2253,6 @@ h2.step3 {
 	text-transform: uppercase;
 }
 
+#google_translate_element {
+	float: right;
+}
