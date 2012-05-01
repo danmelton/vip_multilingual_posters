@@ -17,13 +17,15 @@ get '/' do
 end
 
 get '/step2' do
-  session[:address] = params[:address]
-  address = Geocoder.search(params[:address])
-  location = vip_object(address.first)
-  session[:polling_name] = location["Address"]["LocationName"]
-  session[:polling_coordinates] = location["Address"]["Lat"].to_s + "," + location["Address"]["Lon"].to_s
-  session[:polling_address1] = location["Address"]["Line1"]
-  session[:polling_address2] = location["Address"]["City"] + ", " +location["Address"]["State"] + " " + location["Address"]["Zip"]   
+  if session[:polling_name].nil?
+    session[:address] = params[:address]
+    address = Geocoder.search(params[:address])
+    location = vip_object(address.first)
+    session[:polling_name] = location["Address"]["LocationName"]
+    session[:polling_coordinates] = location["Address"]["Lat"].to_s + "," + location["Address"]["Lon"].to_s
+    session[:polling_address1] = location["Address"]["Line1"]
+    session[:polling_address2] = location["Address"]["City"] + ", " +location["Address"]["State"] + " " + location["Address"]["Zip"]   
+  end
   @languages = load_languages
   erb :step2
 end
@@ -44,19 +46,21 @@ get '/download' do
   translations = YAML.load(open('files/translations.yml'))
   
   pdf = Prawn::Document.new :template => "public/pdfs/#{size}.pdf"  do |pdf|
+    pdf.font "public/fonts/Arial Unicode.ttf"
     pdf.fill_color "FFFFFF"
-    pdf.text translations[language]["vote"], size: 120, style: :bold, :align => :center
+    pdf.text translations[language]["vote"], size: 90, :align => :center
+    pdf.move_down 20    
     pdf.fill_color "000000"    
-    pdf.text translations[language]["election_date"] + ": " + session[:date], size: 25, style: :bold, :align => :center
-    pdf.move_down 10    
-    pdf.text translations[language]["polling_place"], size: 25, style: :bold, :align => :center
-    pdf.text session[:polling_name], size: 20, style: :bold, :align => :center
-    pdf.text session[:polling_address1], size: 20, style: :bold, :align => :center
+    pdf.text translations[language]["election_date"] + ": " + session[:date], size: 25, :align => :center
+    pdf.move_down 20    
+    pdf.text translations[language]["polling_place"], size: 25, :align => :center
+    pdf.text session[:polling_name], size: 20, :align => :center
+    pdf.text session[:polling_address1], size: 20, :align => :center
     pdf.move_down 10
     pdf.image open(google_map(session[:polling_coordinates])), :fit => [250, 250], :position => :center
     pdf.move_down 70
-    pdf.text translations[language]["more_info"] + " rockthevote.org", size: 20, style: :bold, :align => :center
-    pdf.text translations[language]["sms"] + " 1-800-000-0000", size: 20, style: :bold, :align => :center
+    pdf.text translations[language]["more_info"] + " RockTheVote.org", size: 20, :align => :center
+    pdf.text translations[language]["sms"] + " 1-800-000-0000", size: 20, :align => :center
   end
 
   response.headers['Content-Type'] = "application/pdf"
