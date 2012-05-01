@@ -17,7 +17,7 @@ get '/' do
 end
 
 get '/step2' do
-  if session[:polling_name].nil?
+  if session[:polling_name].nil? || !params[:address].nil?
     session[:address] = params[:address]
     address = Geocoder.search(params[:address])
     location = vip_object(address.first)
@@ -32,8 +32,6 @@ end
 
 get '/step3' do
   session[:date] = params[:date]
-  session[:time1] = params[:time2]
-  session[:time2] = params[:time2]  
   session[:languages] = params[:language]
   
   erb :step3
@@ -67,6 +65,16 @@ get '/download' do
   response.headers['Content-Disposition'] = "inline; filename=poster_#{language}_large.pdf;"
   response.write pdf.render
 
+end
+
+get '/help' do
+  
+  erb :help
+end
+
+get '/about' do
+
+  erb :about
 end
 
 def vip_object(geocoder_object)

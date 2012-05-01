@@ -14,11 +14,14 @@
   <a href="/step2">
     <h2 class="step3">Step 3: Download your posters</h2>
   </a>
+  <p><h1>Download and Post on Your Block</h1></p>
+  <p>Click on the Link to Download Your Poster. We use Google Translate and feedback from passionate people like you. Help us make our <a href="https://github.com/danmelton/vip_multilingual_posters/blob/master/files/translations.yml">translations</a> better!</p>
+  
   <ul class="posters">
     <% if session[:languages].length > 0 %>
       <% session[:languages].each do |lang| %>
         <li class="lang">
-          <%= lang.capitalize %>
+          <%= lang %>
           <span class="downloadLinks"><a class="size 8x11" href="download?language=<%=lang%>&size=large">Download 8.5 x
             11 Poster</a></span>
         </li>
